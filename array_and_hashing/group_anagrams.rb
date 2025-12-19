@@ -20,7 +20,7 @@ def group_anagrams(strs)
 
   strs.each do |s|
       arr = Array.new(26, 0)
-      s.each_char { |c| arr[c.ord - 'a'.ord] = 1 }
+      s.each_char { |c| arr[c.ord - 'a'.ord] += 1 }
 
       hash[arr] << s
   end
