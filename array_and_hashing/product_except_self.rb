@@ -26,6 +26,9 @@ p product_except_self(nums)
 nums = [1,2,3,4]
 res = [1,1,1,1]
 
-prefix = 1
+Prefix: Need to go from start to end
+[1,1,2,6]
 
+Postfix: Need to go from end to start
+[24,12,8,6]
 =end
