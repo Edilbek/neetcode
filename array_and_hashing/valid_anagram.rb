@@ -1,9 +1,6 @@
 # @param {String} s
 # @param {String} t
 # @return {Boolean}
-# @param {String} s
-# @param {String} t
-# @return {Boolean}
 def is_anagram(s, t)
   return false if s.length != t.length
 
