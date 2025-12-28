@@ -1,18 +1,20 @@
 # @param {String} s
 # @param {String} t
 # @return {Boolean}
+# @param {String} s
+# @param {String} t
+# @return {Boolean}
 def is_anagram(s, t)
-  hash = s.chars.tally
-
   return false if s.length != t.length
 
+  counts = s.chars.tally
   t.each_char do |c|
-    hash[c] -= 1
+    return false unless counts[c] && counts[c] > 0
 
-    hash.delete(c) if hash[c] == 0
+    counts[c] -= 1
   end
 
-  hash.empty?
+  true
 end
 
 s = "anagram"
