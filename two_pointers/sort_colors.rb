@@ -31,20 +31,20 @@ def sort_colors(nums)
   # Time: O(n)
   # Space: O(1) in-place
 
-  l, r = 0, nums.length - 1
-  i = 0
+  low, mid, high = 0, 0, nums.length - 1
 
-  while i <= r
-    if nums[i] == 0
-      nums[l], nums[i] = nums[i], nums[l]
-      l += 1
-    elsif nums[i] == 2
-      nums[i], nums[r] = nums[r], nums[i]
-      r -= 1
-      i -= 1
+  while mid <= high
+    case nums[mid]
+    when 0
+      nums[low], nums[mid] = nums[mid], nums[low]
+      low += 1
+      mid += 1
+    when 1
+      mid += 1
+    when 2
+      nums[high], nums[mid] = nums[mid], nums[high]
+      high -= 1
     end
-
-    i += 1
   end
 
   nums
