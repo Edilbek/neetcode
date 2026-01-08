@@ -1,6 +1,11 @@
 # @param {String} s
 # @return {Integer}
 
+# # Best ruby way solution
+# def count_good_substrings(s)
+#   s.chars.each_cons(3).count { |a| a.uniq.size == 3 }
+# end
+
 # No refactoring
 # def count_good_substrings(s)
 #     map = {}
