@@ -8,7 +8,7 @@ def three_sum(nums)
         break if n > 0
         next if i > 0 && n == nums[i - 1]
 
-        l, r = i + 1, r = nums.length - 1
+        l, r = i + 1, nums.length - 1
         while l < r
             sum = n + nums[l] + nums[r]
 
