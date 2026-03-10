@@ -1,4 +1,4 @@
-# @param {Integer[][]} matrix
+# @param {Integer[][]} matri
 # @return {Void} Do not return anything, modify matrix in-place instead.
 def rotate(matrix)
     matrix.each_with_index do |row, i|
